@@ -1,8 +1,8 @@
-function countBs(input) {
+var countBs = function (input) {
   return countChar(input, "B");
 }
 
-function countChar(input, character) {
+var countChar = function(input, character) {
   var num_of_char = 0;
   for (var i = 0; i < input.length; i++) {
     if (input.charAt(i) === character) {

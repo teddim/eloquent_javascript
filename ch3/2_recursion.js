@@ -1,4 +1,4 @@
-function isEven(num) {
+var isEven = function(num) {
 
   if (num < 0) {
     num = -num;
