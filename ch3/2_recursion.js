@@ -13,7 +13,7 @@ var isEven = function(num) {
   else {
     return isEven(num - 2);
   }
-}
+};
 
 console.log(isEven(0));
 console.log(isEven(1));
