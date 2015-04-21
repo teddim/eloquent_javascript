@@ -1,15 +1,19 @@
 //solve with array
 var array = [];
 var oc = '#';
+var result = '';
 for (var i = 0; i < 8; i++) {
   array.push(oc);
-  console.log(array.join(''));
+  result += array.join('') + "\n";
 }
+console.log(result);
 
 //solve with a string
 var triangle = '';
 var oc = '#';
+var result = '';
 for (var i = 0; i < 8; i++) {
   triangle += oc;
-  console.log(triangle);
+  result += triangle + "\n";
+  console.log(result.trim());
 }
