@@ -9,17 +9,23 @@ function average(array) {
   return array.reduce(plus) / array.length;
 }
 
+var missing_persons = function(person){
+  if(person.mother !== null && byName[person.mother] !== undefined) {
+    return true;} else {
+      return false;
+    }
+};
+
+var age_difference = function(person){
+  return ( person.born - byName[person.mother].born);
+};
+
 var byName = {};
 
 ancestry.forEach(function(person) {
   byName[person.name] = person;
 });
 
-var children_with_moms = ancestry.filter(function(person){
-  if(person.mother !== null) {
-    return true;} else {
-      return false;
-    }
-});
+var ancestry_has_mom = ancestry.filter(missing_persons).map(age_difference);
 
-console.log(children_with_moms);
+console.log(average(ancestry_has_mom));
